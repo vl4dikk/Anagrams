@@ -7,6 +7,9 @@ public class Reverser {
 		if (input == null) {
 			throw new IllegalArgumentException("Error : argument cannot be null");
 		}
+		if (input.trim().isEmpty()) {
+			return input;
+		}
 		StringJoiner allWords = new StringJoiner(" ");
 		String[] inputWords = input.split(" ");
 		for (String s : inputWords) {
