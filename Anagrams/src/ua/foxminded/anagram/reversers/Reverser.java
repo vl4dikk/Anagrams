@@ -1,16 +1,13 @@
 package ua.foxminded.anagram.reversers;
 
+import java.util.StringJoiner;
+
 public class Reverser {
 	public String reverse(String input) {
-		StringBuilder allWords = new StringBuilder();
+		StringJoiner allWords = new StringJoiner(" ");
 		String[] inputWords = input.split(" ");
 		for (String s : inputWords) {
-			allWords.append(reverseWord(s));
-		}
-		for (int i = 0; i < input.length(); i++) {
-			if (Character.isWhitespace(input.charAt(i))) {
-				allWords.insert(i, " ");
-			}
+			allWords.add(reverseWord(s));
 		}
 		return allWords.toString();
 	}
