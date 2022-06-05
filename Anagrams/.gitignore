@@ -1,3 +1,4 @@
 /bin/
 # ignore the file literally named .classpath
 .classpath
+/target/
